@@ -16,17 +16,17 @@ import lombok.Data;
 @Table(name = "tbl_employee")
 @Data
 public class Employee {
-	
+
 	@Id
-	@Column(name = "id" )
+	@Column(name = "id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
+
 	@Column(name = "employee_name")
 	private String name;
-	
+
 	@OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "address_id", referencedColumnName = "id")
-    private Address address;
+	@JoinColumn(name = "address_id", referencedColumnName = "id")
+	private Address address;
 
 }
