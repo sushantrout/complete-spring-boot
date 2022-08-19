@@ -13,12 +13,12 @@ import javax.persistence.Table;
 import lombok.Data;
 
 @Entity
-@Table(name = "users")
+@Table(name = "tbl_employee")
 @Data
 public class Employee {
 	
 	@Id
-	@Column(name = "employee_id" )
+	@Column(name = "id" )
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
@@ -27,6 +27,6 @@ public class Employee {
 	
 	@OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "address_id", referencedColumnName = "id")
-	private Address address;
+    private Address address;
 
 }
