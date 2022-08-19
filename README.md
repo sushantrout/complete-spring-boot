@@ -9,4 +9,17 @@
       <li><b>Bidirectional relationship: </b>This relationship contains an owning side as well as an inverse side. So here every entity has a relationship field or refer the property to other entity.</li>
     </ol>
   </dd>
+
+  <dt>
+    <br><br><h4>Types of Mapping</h4>
+  </dt>
+  <dd>
+    Following are the various ORM mappings: -<br>
+    <ol>
+      <li><b>One-to-one   :</b> This association is represented by <u>@OneToOne</u> annotation. Here, instance of each entity is related to a single instance of another entity.</li>
+      <li><b>One-to-many  :</b> This association is represented by <u>@OneToMany</u> annotation. In this relationship, an instance of one entity can be related to more than one instance of another entity.</li>
+      <li><b>Many-to-one  :</b> This mapping is defined by <u>@ManyToOne</u> annotation. In this relationship, multiple instances of an entity can be related to single instance of another entity.</li>
+      <li><b>Many-to-many :</b> This association is represented by <u>@ManyToMany</u> annotation. Here, multiple instances of an entity can be related to multiple instances of another entity. In this mapping, any side can be the owing side.</li>
+    </ol>
+  </dd>
 </dl>
