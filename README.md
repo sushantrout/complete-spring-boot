@@ -1,7 +1,7 @@
 # complete-spring-boot
 <dl>
   <dt><h3>Object Relational Mapping</h3></dt>
-  <dd>Object Relational Mapping (ORM) is a functionality which is used to develop and maintain a relationship between an object and relational database by mapping an object state to database column. It is capable to handle various database operations easily such as inserting, updating, deleting etc.</dd>
+  <dd>ORM or Object Relational Mapping is a system that implements the responsibility of mapping the Object to Relational Model. That means it is responsible to store Object Model data into Relational Model and further read the data from Relational Model into Object Model.</dd>
   <dt><h3>Mapping Directions</h3></dt>
   <dd>
     <ol>
