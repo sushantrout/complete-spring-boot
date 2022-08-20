@@ -58,6 +58,8 @@ Important points at the time of fetching the data.
 <h3>One-To-One</h3>
 <h4>With forgain key</h4> (https://github.com/sushantrout/complete-spring-boot/tree/main/one-to-one-with-forgain-key)
 
+![one-to-one-forgain-key](https://user-images.githubusercontent.com/38247082/185732218-73b1777e-869d-4b20-b8e7-4b0af696b4be.png)
+
 ```
 
 @Entity
@@ -100,6 +102,9 @@ public class Address {
 ```
 
 <h3>With shared primary key</h3> (https://github.com/sushantrout/complete-spring-boot/tree/main/one-to-one-with-shared-primary-key)
+
+![one-to-one-shared-primarykey](https://user-images.githubusercontent.com/38247082/185732406-803597d7-7fc2-426a-bba0-889d23b0236c.png)
+
 
 ```
 
