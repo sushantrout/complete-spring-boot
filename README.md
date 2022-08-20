@@ -68,7 +68,7 @@ public class Address {
 }
 ```
 
-<h3>With shared primary key</h3>
+<h3>With shared primary key</h3> (https://github.com/sushantrout/complete-spring-boot/tree/main/one-to-one-with-shared-primary-key)
 
 ```
 
@@ -115,7 +115,7 @@ public class Address {
 
 ```
 
-<h3>Using join table</h3>
+<h3>Using join table</h3> (https://github.com/sushantrout/complete-spring-boot/tree/main/one-to-one-with-third-table)
 
 ```
 @Entity
