@@ -199,3 +199,52 @@ public class Address {
 ```
 <h2>One-To-Many</h2>
 
+one-to-many mapping means that one row in a table is mapped to multiple rows in another table.
+
+It's a good practice to mark the many-to-one side as the owning side.
+![one-to-many-join-column](https://user-images.githubusercontent.com/38247082/185733205-78f137d9-b47e-434a-a368-54fe39faa815.png)
+
+```
+@Entity
+@Table(name = "tbl_employee")
+@Data
+public class Employee {
+
+	@Id
+	@Column(name = "id")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+
+	@Column(name = "employee_name")
+	private String name;
+
+	@OneToMany(mappedBy = "employee")
+	private List<Address> address = new ArrayList<>();
+
+}
+
+```
+
+
+```
+
+@Entity
+@Table(name = "tbl_address")
+@Data
+public class Address {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id")
+	private Long id;
+	
+	@Column(name = "country")
+	private String country;
+	
+	@ManyToOne
+	@JoinColumn(name = "address_id")
+	private Employee employee;
+}
+
+
+```
