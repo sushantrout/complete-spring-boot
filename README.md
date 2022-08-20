@@ -114,3 +114,47 @@ public class Address {
 }
 
 ```
+
+<h3>Using join table</h3>
+
+```
+@Entity
+@Table(name = "tbl_employee")
+@Data
+public class Employee {
+
+	@Id
+	@Column(name = "id")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+
+	@Column(name = "employee_name")
+	private String name;
+
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinTable(name = "employee_address",
+		joinColumns = { @JoinColumn(referencedColumnName = "id", name = "employee_id") },
+		inverseJoinColumns = { @JoinColumn(referencedColumnName = "id", name = "address_id", unique = true) })
+	private Address address;
+
+}
+```
+
+```
+@Entity
+@Table(name = "tbl_address")
+@Data
+public class Address {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id")
+	private Long id;
+	
+	@Column(name = "country")
+	private String country;
+	
+	@OneToOne(mappedBy = "address")
+	private Employee employee;
+}
+```
