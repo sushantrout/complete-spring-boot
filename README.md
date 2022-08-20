@@ -200,8 +200,8 @@ public class Address {
 <h2>One-To-Many</h2>
 
 one-to-many mapping means that one row in a table is mapped to multiple rows in another table.
-
 It's a good practice to mark the many-to-one side as the owning side.
+
 ![one-to-many-join-column](https://user-images.githubusercontent.com/38247082/185733205-78f137d9-b47e-434a-a368-54fe39faa815.png)
 
 ```
