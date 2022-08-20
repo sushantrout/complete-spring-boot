@@ -148,6 +148,9 @@ public class Address {
 
 <h3>Using join table</h3> (https://github.com/sushantrout/complete-spring-boot/tree/main/one-to-one-with-third-table)
 
+![one-to-one-jointable](https://user-images.githubusercontent.com/38247082/185731897-36029ed1-b064-41c5-a8bf-72c56b086dc6.png)
+
+
 ```
 @Entity
 @Table(name = "tbl_employee")
