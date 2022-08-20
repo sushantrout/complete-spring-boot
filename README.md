@@ -24,6 +24,37 @@
   </dd>
 </dl>
 
+<h2>
+Important points at the time of fetching the data.
+</h2>
+
+
+```
+
+	@Entity
+	@Table(name = "tbl_employee")
+	@Data
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "address"}) //It makes the entity non-owning side lazy
+	public class Employee{
+		@OneToOne(cascade = CascadeType.ALL)
+		@JoinColumn(name = "address_id", referencedColumnName = "id")
+		private Address address;
+	}
+	
+	{
+	  "id": 3,
+	  "name": "SUSHANT KUMAR ROUT"
+	}
+	
+```
+
+<h2>And also we have some annotations like : </h2>
+<ol>
+	<li>@JsonManagedReference</li>
+	<li>@JsonBackReference</li>
+	<li>@JsonIgnore</li>
+</ol>
+
 <h3>One-To-One</h3>
 <h4>With forgain key</h4> (https://github.com/sushantrout/complete-spring-boot/tree/main/one-to-one-with-forgain-key)
 
