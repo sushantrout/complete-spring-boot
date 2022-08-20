@@ -55,7 +55,7 @@ Important points at the time of fetching the data.
 	<li>@JsonIgnore</li>
 </ol>
 
-<h3>One-To-One</h3>
+<h2>One-To-One</h2>
 <h4>With forgain key</h4> (https://github.com/sushantrout/complete-spring-boot/tree/main/one-to-one-with-forgain-key)
 
 ![one-to-one-forgain-key](https://user-images.githubusercontent.com/38247082/185732218-73b1777e-869d-4b20-b8e7-4b0af696b4be.png)
@@ -197,3 +197,5 @@ public class Address {
 	private Employee employee;
 }
 ```
+<h2>One-To-Many</h2>
+
