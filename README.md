@@ -23,3 +23,47 @@
     </ol>
   </dd>
 </dl>
+
+<h3>One-To-One</h3>
+<h4>With forgain key</h4>
+
+```
+
+@Entity
+@Table(name = "tbl_employee")
+@Data
+public class Employee {
+
+	@Id
+	@Column(name = "id")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+
+	@Column(name = "employee_name")
+	private String name;
+
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "address_id", referencedColumnName = "id")
+	private Address address;
+
+}
+```
+
+```
+@Entity
+@Table(name = "tbl_address")
+@Data
+public class Address {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id")
+	private Long id;
+	
+	@Column(name = "country")
+	private String country;
+	
+	@OneToOne(mappedBy = "address")
+	private Employee employee;
+}
+```
